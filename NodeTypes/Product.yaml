@@ -1,0 +1,68 @@
+'NeosRulez.Shop:Document.Product':
+  ui:
+    inspector:
+      groups:
+        createCoupon:
+          label: Create coupon
+          icon: fas fa-percentage
+          position: end
+  properties:
+    createCouponAfterPayment:
+      type: boolean
+      ui:
+        label: i18n
+        inspector:
+          group: createCoupon
+          position: 1
+    mailSubject:
+      type: string
+      ui:
+        label: i18n
+        inspector:
+          hidden: 'ClientEval:node.properties.createCouponAfterPayment ? false : true'
+          group: createCoupon
+          position: 2
+    isShippingCoupon:
+      type: boolean
+      ui:
+        label: i18n
+        inspector:
+          hidden: 'ClientEval:node.properties.createCouponAfterPayment ? false : true'
+          group: createCoupon
+          position: 3
+    percentual:
+      type: boolean
+      ui:
+        label: i18n
+        inspector:
+          hidden: 'ClientEval:node.properties.createCouponAfterPayment && !node.properties.isShippingCoupon ? false : true'
+          group: createCoupon
+          position: 4
+    value:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.createCouponAfterPayment && !node.properties.isShippingCoupon ? false : true'
+          group: createCoupon
+          position: 5
+    cartMinValue:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.createCouponAfterPayment && !node.properties.isShippingCoupon ? false : true'
+          group: createCoupon
+          position: 6
+    storagePoint:
+      type: reference
+      ui:
+        label: i18n
+        inspector:
+          hidden: 'ClientEval:node.properties.createCouponAfterPayment ? false : true'
+          group: createCoupon
+          position: 7
+          editorOptions:
+            nodeTypes: [ 'Neos.Neos:Document' ]

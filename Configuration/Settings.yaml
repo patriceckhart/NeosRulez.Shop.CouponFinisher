@@ -1,0 +1,24 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        NeosRulez.Shop.CouponFinisher: true
+    userInterface:
+      translation:
+        autoInclude:
+          NeosRulez.Shop.CouponFinisher:
+            - 'NodeTypes/*'
+            - 'NodeTypes/Document/*'
+
+NeosRulez:
+  Shop:
+    Finisher:
+      afterPayment:
+        createCoupon:
+          class: NeosRulez\Shop\CouponFinisher\Domain\Finisher\CouponFinisher
+    CouponFinisher:
+      Mail:
+        senderMail: 'noreply@domain.tld'
+        template:
+          package: 'NeosRulez.Shop.CouponFinisher'
+          fusionPath: 'NeosRulez/Shop/CouponFinisher/Mail/Coupon'

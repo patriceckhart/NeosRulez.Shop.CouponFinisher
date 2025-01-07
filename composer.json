@@ -1,0 +1,18 @@
+{
+    "description": "Create Coupons after Payment",
+    "type": "neos-package",
+    "name": "neosrulez/shop-couponfinisher",
+    "require": {
+        "neosrulez/shop": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NeosRulez\\Shop\\CouponFinisher\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "NeosRulez.Shop.CouponFinisher"
+        }
+    }
+}

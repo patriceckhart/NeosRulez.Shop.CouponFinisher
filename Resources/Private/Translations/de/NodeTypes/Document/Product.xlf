@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Shop" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.createCouponAfterPayment" xml:space="preserve">
+                <source>Erstelle Gutschein nach Bezahlung</source>
+            </trans-unit>
+            <trans-unit id="properties.mailSubject" xml:space="preserve">
+                <source>E-Mail Betreff</source>
+            </trans-unit>
+            <trans-unit id="properties.isShippingCoupon" xml:space="preserve">
+                <source>Bestellung mit diesem Gutschein ist versandkostenfrei</source>
+            </trans-unit>
+            <trans-unit id="properties.percentual" xml:space="preserve">
+                <source>Prozentueller Wert</source>
+            </trans-unit>
+            <trans-unit id="properties.value" xml:space="preserve">
+                <source>Wert</source>
+            </trans-unit>
+            <trans-unit id="properties.cartMinValue" xml:space="preserve">
+                <source>Warenkorb Wert</source>
+            </trans-unit>
+            <trans-unit id="properties.storagePoint" xml:space="preserve">
+                <source>Backend Speicherort</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,9 @@
+include: resource://Neos.Fusion/Private/Fusion/Root.fusion
+
+NeosRulez.Shop.CouponFinisher.Mail.Coupon = Neos.Fusion:Join {
+
+    renderer = afx`
+        <h1>{I18n.translate('NeosRulez.Shop.CouponFinisher:Fusion.Mail.Coupon:content.header')}</h1>
+        <p>{code}</p>
+    `
+}
