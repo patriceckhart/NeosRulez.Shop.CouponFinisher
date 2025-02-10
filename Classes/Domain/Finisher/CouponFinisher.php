@@ -64,12 +64,12 @@ class CouponFinisher
      */
     public function execute(mixed $args): void
     {
-        if(is_object($args) && get_class($args) !== 'NeosRulez\Shop\Domain\Model\Order') {
-            $arguments = json_decode($args, true);
-        } else {
+        if(is_object($args) && get_class($args) === 'NeosRulez\Shop\Domain\Model\Order') {
             $arguments['order_number'] = $args->getOrdernumber();
             $invoiceData = json_decode($args->getInvoicedata(), true);
             $arguments['email'] = $invoiceData['email'];
+        } else {
+            $arguments = json_decode($args, true);
         }
 
         $order = $this->orderRepository->findByOrdernumber($arguments['order_number']);
