@@ -64,7 +64,7 @@ class CouponFinisher
      */
     public function execute(mixed $args): void
     {
-        if(get_class($args) !== 'NeosRulez\Shop\Domain\Model\Order') {
+        if(is_object($args) && get_class($args) !== 'NeosRulez\Shop\Domain\Model\Order') {
             $arguments = json_decode($args, true);
         } else {
             $arguments['order_number'] = $args->getOrdernumber();
