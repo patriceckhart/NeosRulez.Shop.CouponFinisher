@@ -69,7 +69,11 @@ class CouponFinisher
             $invoiceData = json_decode($args->getInvoicedata(), true);
             $arguments['email'] = $invoiceData['email'];
         } else {
-            $arguments = json_decode($args, true);
+            if(is_array($args)) {
+                $arguments = $args;
+            } else {
+                $arguments = json_decode($args, true);
+            }
         }
 
         $order = $this->orderRepository->findByOrdernumber($arguments['order_number']);
